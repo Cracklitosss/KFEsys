@@ -57,6 +57,17 @@ export default function Layout({ children }: LayoutProps) {
                 </Link>
               )}
 
+              {(user?.role === Role.ADMIN || user?.role === Role.MANAGER) && (
+                <Link
+                  to="/dashboard"
+                  className={`${
+                    isActive('/dashboard') ? 'text-orange-600 font-semibold' : 'text-gray-600 hover:text-orange-600'
+                  } transition-colors`}
+                >
+                  Dashboard
+                </Link>
+              )}
+
               <div className="flex items-center gap-4 ml-6 pl-6 border-l border-gray-300">
                 <div className="text-right">
                   <p className="text-sm font-medium text-gray-900">{user?.fullName}</p>

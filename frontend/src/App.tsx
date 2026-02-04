@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
 import POSPage from './pages/POSPage';
+import DashboardPage from './pages/DashboardPage';
 import PrivateRoute from './components/PrivateRoute';
 
 function App() {
@@ -39,6 +40,14 @@ function App() {
           element={
             <PrivateRoute>
               <ProductsPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <DashboardPage />
             </PrivateRoute>
           }
         />
