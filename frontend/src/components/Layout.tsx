@@ -35,6 +35,17 @@ export default function Layout({ children }: LayoutProps) {
                 Inicio
               </Link>
 
+              {(user?.role === Role.ADMIN || user?.role === Role.CASHIER) && (
+                <Link
+                  to="/pos"
+                  className={`${
+                    isActive('/pos') ? 'text-orange-600 font-semibold' : 'text-gray-600 hover:text-orange-600'
+                  } transition-colors`}
+                >
+                  Punto de Venta
+                </Link>
+              )}
+
               {user?.role === Role.ADMIN && (
                 <Link
                   to="/products"

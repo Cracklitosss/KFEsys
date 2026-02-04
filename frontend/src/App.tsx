@@ -4,6 +4,7 @@ import { useAuthStore } from './store/authStore';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
+import POSPage from './pages/POSPage';
 import PrivateRoute from './components/PrivateRoute';
 
 function App() {
@@ -22,6 +23,14 @@ function App() {
           element={
             <PrivateRoute>
               <HomePage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/pos"
+          element={
+            <PrivateRoute>
+              <POSPage />
             </PrivateRoute>
           }
         />
