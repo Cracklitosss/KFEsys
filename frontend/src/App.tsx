@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useAuthStore } from './store/authStore';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
+import ProductsPage from './pages/ProductsPage';
 import PrivateRoute from './components/PrivateRoute';
 
 function App() {
@@ -21,6 +22,14 @@ function App() {
           element={
             <PrivateRoute>
               <HomePage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/products"
+          element={
+            <PrivateRoute>
+              <ProductsPage />
             </PrivateRoute>
           }
         />
