@@ -4,7 +4,7 @@ import ProductModal from '../components/ProductModal';
 import CategoryModal from '../components/CategoryModal';
 import { productsService } from '../services/products.service';
 import { categoriesService } from '../services/categories.service';
-import { Product, Category, CreateProductDto, CreateCategoryDto } from '../types/product.types';
+import type { Product, Category, CreateProductDto, CreateCategoryDto } from '../types/product.types';
 
 export default function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);

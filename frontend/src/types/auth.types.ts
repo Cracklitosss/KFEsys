@@ -1,8 +1,10 @@
-export enum Role {
-  ADMIN = 'admin',
-  CASHIER = 'cashier',
-  MANAGER = 'manager',
-}
+export const Role = {
+  ADMIN: 'admin',
+  CASHIER: 'cashier',
+  MANAGER: 'manager',
+} as const;
+
+export type Role = (typeof Role)[keyof typeof Role];
 
 export interface User {
   id: number;

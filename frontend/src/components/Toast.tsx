@@ -25,16 +25,16 @@ export default function Toast({ message, type, onClose, duration = 3000 }: Toast
     warning: 'bg-yellow-500',
   }[type];
 
-  const icon = {
-    success: '✓',
-    error: '✕',
-    info: 'ℹ',
-    warning: '⚠',
+  const indicatorColor = {
+    success: 'bg-green-700',
+    error: 'bg-red-700',
+    info: 'bg-blue-700',
+    warning: 'bg-yellow-700',
   }[type];
 
   return (
     <div className={`${bgColor} text-white px-6 py-4 rounded-lg shadow-lg flex items-center gap-3 min-w-[300px]`}>
-      <span className="text-2xl">{icon}</span>
+      <div className={`w-3 h-3 rounded-full ${indicatorColor}`}></div>
       <p className="flex-1">{message}</p>
       <button
         onClick={onClose}

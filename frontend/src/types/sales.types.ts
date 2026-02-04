@@ -1,5 +1,5 @@
-import { Product } from './product.types';
-import { User } from './auth.types';
+import type { Product } from './product.types';
+import type { User } from './auth.types';
 
 export interface CartItem {
   product: Product;

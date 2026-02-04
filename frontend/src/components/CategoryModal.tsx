@@ -1,5 +1,5 @@
-import { useState, useEffect, FormEvent } from 'react';
-import { Category, CreateCategoryDto } from '../types/product.types';
+import { useState, useEffect, type FormEvent } from 'react';
+import type { Category, CreateCategoryDto } from '../types/product.types';
 
 interface CategoryModalProps {
   isOpen: boolean;

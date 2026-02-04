@@ -1,5 +1,5 @@
 import api from './api';
-import { Category, CreateCategoryDto, UpdateCategoryDto } from '../types/product.types';
+import type { Category, CreateCategoryDto, UpdateCategoryDto } from '../types/product.types';
 
 export const categoriesService = {
   async getAll(): Promise<Category[]> {

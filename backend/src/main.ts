@@ -14,8 +14,7 @@ async function bootstrap() {
     credentials: true,
   });
 
-  // Global exception filters
-  app.useGlobalFilters(new AllExceptionsFilter(), new HttpExceptionFilter());
+  app.useGlobalFilters(new HttpExceptionFilter(), new AllExceptionsFilter());
 
   // Global validation pipe
   app.useGlobalPipes(
@@ -38,7 +37,7 @@ async function bootstrap() {
 
   const port = process.env.PORT || 3000;
   await app.listen(port);
-  console.log(`🚀 Application running on: http://localhost:${port}`);
-  console.log(`📚 Swagger docs available at: http://localhost:${port}/api/docs`);
+  console.log(`Application running on: http://localhost:${port}`);
+  console.log(`Swagger docs available at: http://localhost:${port}/api/docs`);
 }
 bootstrap();

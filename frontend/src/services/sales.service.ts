@@ -1,5 +1,5 @@
 import api from './api';
-import { Sale, CreateSaleDto } from '../types/sales.types';
+import type { Sale, CreateSaleDto } from '../types/sales.types';
 
 export const salesService = {
   async create(data: CreateSaleDto): Promise<Sale> {

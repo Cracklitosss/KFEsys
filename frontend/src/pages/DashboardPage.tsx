@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import { reportsService } from '../services/reports.service';
 import { socketService } from '../services/socket.service';
-import {
+import type {
   SalesByDateRange,
   TopProduct,
   SalesByProduct,

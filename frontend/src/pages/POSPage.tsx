@@ -4,7 +4,7 @@ import { productsService } from '../services/products.service';
 import { salesService } from '../services/sales.service';
 import { socketService } from '../services/socket.service';
 import { useCartStore } from '../store/cartStore';
-import { Product } from '../types/product.types';
+import type { Product } from '../types/product.types';
 
 export default function POSPage() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -264,7 +264,9 @@ export default function POSPage() {
       {showSuccessModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-8 max-w-md text-center">
-            <div className="text-6xl mb-4">✓</div>
+            <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-green-500"></div>
+            </div>
             <h3 className="text-2xl font-bold text-green-600 mb-2">¡Venta Exitosa!</h3>
             <p className="text-gray-600">La venta se ha procesado correctamente</p>
           </div>
