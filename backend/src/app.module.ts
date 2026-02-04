@@ -9,6 +9,7 @@ import { ProductsModule } from './products/products.module';
 import { CategoriesModule } from './categories/categories.module';
 import { SalesModule } from './sales/sales.module';
 import { WebsocketsModule } from './websockets/websockets.module';
+import { ReportsModule } from './reports/reports.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { WebsocketsModule } from './websockets/websockets.module';
     CategoriesModule,
     SalesModule,
     WebsocketsModule,
+    ReportsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
